@@ -1,0 +1,148 @@
+Task:
+Create a modern, responsive, single-page personal portfolio website for Dr. Jatinder Manhas, based on the uploaded PDF (id-8-CV.pdf). The website should professionally represent his academic, research, and administrative profile.
+
+Website Purpose:
+To showcase Dr. Manhas’s academic background, research activities, publications, projects, awards, events, and leadership roles in a visually appealing, accessible, and easy-to-navigate format.
+
+Design and Layout Requirements
+
+1. General Layout
+
+Use a clean, research-oriented theme with a light background and elegant typography (e.g., Inter, Lato, or Poppins).
+
+Include a top navigation bar linking to:
+
+Home
+
+Research
+
+Publications
+
+Projects
+
+Events & FDPs
+
+Teaching & Administration
+
+Awards
+
+Contact
+
+Use section-based smooth scrolling navigation.
+
+2. Hero Section (Home)
+
+Prominent profile photo (placeholder if not available).
+
+Display:
+
+Name: Dr. Jatinder Manhas, Ph.D.
+
+Title: Associate Professor, Department of Computer Science & IT, University of Jammu
+
+Sub-title: Associate Director, SIIEDC (University of Jammu)
+
+Research Interests: Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Brain-Computer Interface, EEG, Neuroscience, Drones, IoT
+
+Add buttons for “View Publications,” “Research Projects,” and “Contact.”
+
+3. Academic Profile Section
+
+Educational Qualifications: Ph.D., MCA, B.Sc. (Non-Medical), Senior Secondary (Sainik School Nagrota).
+
+Include timeline layout for degrees with year, institution, and specialization.
+
+4. Research Section
+
+Research Interests (use tags or icons for each domain).
+
+Ph.D. Supervision: Divide into Awarded and Ongoing sections, with student names, topics, and years.
+
+Research Projects: Show funding agency, title, budget, duration. Present them as responsive cards or an expandable accordion.
+
+5. Publications Section
+Organize into tabs or filters:
+
+Journal Publications
+
+Conference Proceedings / Book Chapters
+
+Books Authored or Edited
+
+Add DOIs with clickable links to each entry.
+
+Include citation metrics or publication count at the top (if possible).
+
+6. Awards & Fellowships
+List national/international fellowships, recognitions, and travel sponsorships as bullet cards with years.
+
+7. Events & FDPs
+Show as a structured timeline:
+
+Conferences Organized
+
+FDPs and Workshops Coordinated
+
+Youth Festivals and Collaborations with Indian Army
+Use icons (🎓 for academic, 🛩️ for Army collabs).
+
+8. Teaching & Administrative Roles
+Add subsections:
+
+Teaching Experience: Courses taught, guest lectures, visiting faculty roles.
+
+Administrative Experience: In-charge Head, Associate Director (SIIEDC), Provost, Registrar roles, and committee memberships.
+Use a table or collapsible layout for clarity.
+
+9. Contact Section
+Include:
+
+Address: University of Jammu, Bhaderwah Campus, J&K, India
+
+Email: manhas.jatinder@gmail.com
+ / jatindermanhas@jammuuniversity.in
+
+Mobile: +91-94191-73793
+
+Links: LinkedIn, ResearchGate, ORCID, JU Faculty Profile
+
+Add contact form (for name, email, message).
+
+Technical Requirements
+
+Frontend Stack:
+
+Use React + Tailwind CSS (preferred)
+or simple HTML/CSS/Bootstrap 5 if static.
+
+Add subtle animations (Framer Motion or AOS).
+
+Make it fully responsive and optimized for mobile.
+
+Extras:
+
+Add scroll-to-top button.
+
+Include a download CV button (PDF).
+
+Meta tags for Google Scholar and ORCID.
+
+Favicon based on JU logo or AI/ML symbol.
+
+Add structured data (organization + person schema).
+
+Tone & Presentation
+
+Maintain a professional, academic tone — suitable for university faculty webpages or research profiles. Use clear section headings, consistent formatting, and avoid clutter. Include optional quotes or highlights like:
+
+“Advancing research in Artificial Intelligence and Deep Learning for real-world applications.”
+
+Deliverables
+
+index.html or React App.jsx with full structure.
+
+Separate CSS file or Tailwind classes.
+
+JSON data (optional) for dynamic publication loading.
+
+Responsive design preview.
