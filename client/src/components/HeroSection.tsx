@@ -2,20 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, Mail, FileText, Briefcase } from "lucide-react";
 import { personalInfo, researchInterests } from "@/data/portfolioData";
+import { useLocation } from "wouter";
 
 export function HeroSection() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+  const [, setLocation] = useLocation();
 
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-primary/5 via-background to-accent/5">
@@ -71,7 +61,7 @@ export function HeroSection() {
             <div className="flex flex-wrap gap-3 pt-2">
               <Button
                 size="lg"
-                onClick={() => scrollToSection("publications")}
+                onClick={() => setLocation("/publications")}
                 className="gap-2"
                 data-testid="button-view-publications"
               >
@@ -81,7 +71,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => scrollToSection("projects")}
+                onClick={() => setLocation("/research")}
                 className="gap-2"
                 data-testid="button-research-projects"
               >
@@ -91,7 +81,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => scrollToSection("contact")}
+                onClick={() => setLocation("/contact")}
                 className="gap-2"
                 data-testid="button-contact"
               >

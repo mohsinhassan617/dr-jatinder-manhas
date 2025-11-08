@@ -1,57 +1,29 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useLocation } from "wouter";
 
 const navItems = [
-  { id: "home", label: "Home" },
-  { id: "research", label: "Research" },
-  { id: "publications", label: "Publications" },
-  { id: "projects", label: "Projects" },
-  { id: "events", label: "Events & FDPs" },
-  { id: "teaching", label: "Teaching & Admin" },
-  { id: "awards", label: "Awards" },
-  { id: "contact", label: "Contact" },
+  { path: "/", label: "Home" },
+  { path: "/research", label: "Research" },
+  { path: "/publications", label: "Publications" },
+  { path: "/awards", label: "Awards" },
+  { path: "/events", label: "Events & FDPs" },
+  { path: "/teaching", label: "Teaching & Admin" },
+  { path: "/contact", label: "Contact" },
 ];
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [location, setLocation] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-      setIsMobileMenuOpen(false);
-    }
-  };
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm border-b" : "bg-transparent"
-        }`}
-      >
+      <nav className="sticky top-0 z-40 bg-background/95 backdrop-blur-sm shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <button
-              onClick={() => scrollToSection("home")}
+              onClick={() => setLocation("/")}
               className="text-lg font-semibold hover-elevate px-3 py-1 rounded-md transition-colors"
               data-testid="link-home"
             >
@@ -62,12 +34,12 @@ export function Navigation() {
             <div className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => (
                 <Button
-                  key={item.id}
+                  key={item.path}
                   variant="ghost"
                   size="sm"
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-sm"
-                  data-testid={`link-${item.id}`}
+                  onClick={() => setLocation(item.path)}
+                  className={`text-sm ${location === item.path ? 'bg-accent' : ''}`}
+                  data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   {item.label}
                 </Button>
@@ -94,11 +66,14 @@ export function Navigation() {
           <div className="flex flex-col p-4 gap-2">
             {navItems.map((item) => (
               <Button
-                key={item.id}
+                key={item.path}
                 variant="ghost"
-                onClick={() => scrollToSection(item.id)}
-                className="justify-start text-base h-12"
-                data-testid={`mobile-link-${item.id}`}
+                onClick={() => {
+                  setLocation(item.path);
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`justify-start text-base h-12 w-full ${location === item.path ? 'bg-accent' : ''}`}
+                data-testid={`mobile-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {item.label}
               </Button>
