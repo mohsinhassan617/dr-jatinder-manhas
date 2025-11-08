@@ -4,8 +4,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "postinstall": "cd client && npm install && cd .. && npm install",
-  "build": "cd client && npm run build && cd .. && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "postinstall": "cd client && npm install",
+  "build": "cd client && npm run build && cd .. && npx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
   "start": "node dist/index.js"
   },
   
