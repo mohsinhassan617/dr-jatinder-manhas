@@ -1,19 +1,22 @@
 export const personalInfo = {
-  name: "Dr. Jatinder Manhas",
-  title: "Ph.D.",
-  position: "Associate Professor",
-  department: "Department of Computer Science & IT",
-  institution: "University of Jammu",
-  subTitle: "Associate Director, SIIEDC (University of Jammu)",
-  tagline: "Advancing research in Artificial Intelligence and Deep Learning for real-world applications",
-  email: "manhas.jatinder@gmail.com",
-  emailSecondary: "jatindermanhas@jammuuniversity.in",
-  mobile: "+91-94191-73793",
-  address: "University of Jammu, Bhaderwah Campus, J&K, India",
-  linkedin: "https://linkedin.com/in/dr-jatinder-manhas",
-  researchGate: "https://researchgate.net/profile/Dr_Manhas",
-  orcid: "https://orcid.org/0000-0002-3575-799X",
-  juProfile: "https://www.jammuuniversity.ac.in/faculty-profile",
+  name            : "Dr. Jatinder Manhas",
+  title           : "Ph.D.",
+  position        : "Associate Professor",
+  department     : "Department of Computer Science & IT",
+  institution    : "University of Jammu",
+  dept2         : "Skill Incubation Innovation Entrepreneurship Development Centre (SIIEDC)",
+  position2      : "Associate Director",
+  tagline        : "Advancing research in Artificial Intelligence and Deep Learning for real-world applications",
+  email          : "manhas.jatinder@gmail.com",
+  emailSecondary : "jatindermanhas@jammuuniversity.in",
+  mobile         : "+91-94191-73793",
+  address        : "Skill Incubation Innovation Entrepreneurship Development Centre (SIIEDC), University of Jammu, J&K, India",
+  linkedin      : "https://www.linkedin.com/in/dr-jatinder-manhas-12a80049/?originalSubdomain=in",
+  researchGate   : "https://researchgate.net/profile/Dr_Manhas",
+  orcid         : "https://orcid.org/0000-0002-3575-799X",
+  juProfile      : "https://admin.jammuuniversity.ac.in/juprofiles/profilepage.aspx?id=8",
+  academia       : "https://jammuniversity.academia.edu/JatinderManhas",
+
 };
 
 export const researchInterests = [
@@ -24,8 +27,17 @@ export const researchInterests = [
   "Brain-Computer Interface",
   "Electroencephalography (EEG)",
   "Neuroscience",
-  "Drones",
+  "Drone Technology",
   "Internet of Things (IoT)",
+  "Data Science",
+  "Human-Computer Interaction",
+  "Augmented Reality (AR) / Virtual Reality (VR)",
+  "Robotics",
+  "Cyber Forensics",
+  "Cyber Physical Systems",
+  "Quantum Computing",
+  "Agentic AI",
+
 ];
 
 export const education = [
@@ -67,24 +79,29 @@ export const phdAwarded = [
     enrolled: "2017",
     awarded: "2022",
     thesis: "Empirical study of machine learning algorithms in predictive diagnosis of medical disorders",
+    photo: "/phd/neeraj.png"
   },
   {
     name: "Dr. Rachit Gupta",
     enrolled: "2018",
     awarded: "2023",
     thesis: "A study of Machine Learning based approaches to develop an optimized framework for early diagnosis of Oral Cancer and Pre-cancerous legions",
+    photo: "/phd/rachit.png"
   },
   {
-    name: "Ms. Priya Rani",
+    name: "Dr. Priya Rani",
     enrolled: "2019",
     awarded: "2024",
     thesis: "A Study of Deep Learning Based Approaches to Design and Develop Optimized Framework for classification of Microscopic Bacteria Images",
+    photo: "/phd/priya.png"
+    
   },
   {
-    name: "Ms. Shallu Kotwal",
+    name: "Dr. Shallu Kotwal",
     enrolled: "2021",
     awarded: "2025",
     thesis: "Design and Development of an Intelligent Hybrid Framework for Automated Classification of Microscopic Bacterial Images",
+    photo: "/phd/shallu.png"
   },
 ];
 
@@ -118,12 +135,8 @@ export const phdOngoing = [
     name: "Ms. Renu Samyal",
     enrolled: "2025",
     thesis: "AI-Assisted Memory Forensics: A Hybrid Vision Transformer and GNN Framework for Real-Time Image-Based Malware Detection and Classification",
-  },
-  {/*{
-    name: "Mr. Rahul Sharma",
-    enrolled: "2025",
-    thesis: "Brain-Computer Interface Systems with Artificial Intelligence-Powered Drone Navigation Using Electroencephalogram Signals",
-  },*/}
+  }
+  
 ];
 
 export const researchProjects = [
