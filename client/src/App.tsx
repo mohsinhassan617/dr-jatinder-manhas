@@ -40,7 +40,7 @@ function App() {
           <Navigation />
           {/* You can place ThemeToggle in the Navbar or corner */}
           <div className="fixed top-4 right-4 z-50">
-            <ThemeToggle />
+           {/*<ThemeToggle />*/}
           </div>
           <main>
             <Router />
