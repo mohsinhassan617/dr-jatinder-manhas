@@ -103,6 +103,7 @@ export const phdAwarded = [
     thesis: "Design and Development of an Intelligent Hybrid Framework for Automated Classification of Microscopic Bacterial Images",
     photo: "/phd/shallu.png"
   },
+  
 ];
 
 export const phdOngoing = [
@@ -136,7 +137,6 @@ export const phdOngoing = [
     enrolled: "2025",
     thesis: "AI-Assisted Memory Forensics: A Hybrid Vision Transformer and GNN Framework for Real-Time Image-Based Malware Detection and Classification",
   }
-  
 ];
 
 export const researchProjects = [
