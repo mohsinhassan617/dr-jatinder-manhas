@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
         <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()}{" "}
-          <span className="font-semibold text-primary">This website is owned by Dr. Jatinder Manhas and managed by Precursor.Code</span> — All rights reserved.
+          <span className="font-semibold text-primary">This website is owned by Dr. Jatinder Manhas and managed by <a href="https://precursorcodelabs.in/" target="_blank" rel="noopener noreferrer" className="underline">Precursor Code Labs</a></span> — All rights reserved.
         </p>
 
         <div className="flex items-center gap-4 text-muted-foreground">
